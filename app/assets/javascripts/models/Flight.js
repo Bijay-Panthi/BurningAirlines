@@ -26,4 +26,6 @@ var f3 = new app.Flight({
   column: 10,
   name: '747'
 });
+
+
 console.log(f3.toJSON());

@@ -7,6 +7,10 @@ app.Flights = Backbone.Collection.extend({
 
   initialize: function () {
 
-    console.log('A new flight collection has been created');
+    this.on('add', function (flight) {
+      var flightNumber = flight.get('flight_number');
+    });
   }
 });
+
+var flightsCollection = new app.Flights();
