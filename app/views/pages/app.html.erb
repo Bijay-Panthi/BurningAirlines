@@ -4,10 +4,48 @@
   <form action=""></form>
 
 </div> -->
-
 <div id="app">
-  BACKBONE SHOULD BE LOADED HERE
+  BACKBONE SHOULD BE LOADED
 </div>
+
+<div id="searchBar">
+  <input id="origin" type="search" placeholder="Origin">
+  <input id="destination" type="search" placeholder="Destination">
+  <input id="date" type="date" placeholder="Date">
+  <input id="submit" type="submit" value="Search">
+</div>
+
+  <script type= "html/template" id="AppViewTemplate">
+    <div id="appView">
+      <h1>All Flights Availables</h1>
+      <nav>
+        <a href="#">All Flights</a>
+        <a href="#">A Flight</a>
+      </nav>
+      <hr>
+      <ul id="flights"></ul>
+    </div>
+  </script>
+
+  <script type="html/template" id="FlightViewTemplate">
+    <div id="flightView">
+    <h1>
+      <%%= flight_number %>
+    </h1>
+    <h2>
+      <%%= origin %>
+    </h2>
+    <h2>
+      <%%= destination %>
+    </h2>
+    <h2>
+      <%%= date %>
+    </h2>
+    <p>
+      <%%= plane %>
+    </p>
+    </div>
+  </script>
 
 <!-- Templates...
 
