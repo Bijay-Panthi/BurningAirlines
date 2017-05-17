@@ -1,8 +1,12 @@
-var app = new Backbone.Collection.extend({
-  urlRoot: "/airplanes",
-  model: app.Flights,
-  initialize: function(){
-    console.log("A collection is made");
+var app = app || {};
+
+app.Flights = Backbone.Collection.extend({
+  url: '/flights',
+
+  model: app.Flight,
+
+  initialize: function () {
+
+    console.log('A new flight collection has been created');
   }
 });
-var er = new app.Flights();

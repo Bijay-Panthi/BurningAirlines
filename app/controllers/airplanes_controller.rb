@@ -10,6 +10,7 @@ class AirplanesController < ApplicationController
   # GET /airplanes/1
   # GET /airplanes/1.json
   def show
+    
   end
 
   # GET /airplanes/new
