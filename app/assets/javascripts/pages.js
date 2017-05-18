@@ -2,7 +2,7 @@
 // Start Backbone history
 var app = app || {};
 
-app.flights = new app.Flight();
+app.flights = new app.Flights();
 app.router = new app.AppRouter();
 
 $(document).ready(function () {

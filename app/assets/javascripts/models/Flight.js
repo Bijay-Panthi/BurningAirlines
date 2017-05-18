@@ -2,10 +2,10 @@ var app = app || {};
 
 
 app.Flight = Backbone.Model.extend({
-  urlRoot: "/flights",
+  urlRoot: "/#flights", //?
 
   defaults: {
-    flight_number: 1,
+    flight_number: 0,
     origin: '',
     destination: '',
     date: 09052017,
@@ -17,15 +17,15 @@ app.Flight = Backbone.Model.extend({
   }
 });
 
-var f1 = new app.Flight();
-console.log(f1.toJSON());
-var f2 = new app.Flight();
-console.log(f2.toJSON());
-var f3 = new app.Flight({
-  row: 75,
-  column: 10,
-  name: '747'
-});
-
-
-console.log(f3.toJSON());
+// var f1 = new app.Flight();
+// console.log(f1.toJSON());
+// var f2 = new app.Flight();
+// console.log(f2.toJSON());
+// var f3 = new app.Flight({
+//   flight_number: 2345,
+//   origin: 'Cairns',
+//   destination: 'Brisbane',
+//   date: 568798,
+//   plane: 2
+// });
+// console.log(f3.toJSON());
