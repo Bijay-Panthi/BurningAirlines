@@ -4,27 +4,22 @@ var app = app || {};
 app.SearchView = Backbone.View.extend({
   el:'#search',
 
-  // events: {
-  //   'click': "searchFlights",
-  //
-  // },
-  //
-  // searchFlights: function () {
-  //   // console.log("search button has been clicked");
-  //   var origin = $('#origin').val();
-  //
-  //   console.log(origin);
-  //
-  //
-  //   // How to get the origin and destination
-  //   // Change the return statement in the filter
-  //   var matchedFlights = this.collection.filter(function (flight) {
-  //     return flight.get("origin").startsWith(origin);
-  //   });
-  //   // debugger;
-  //   this.collection = new app.Flights(matchedFlights);
-  //   this.render();
-  // },
+  events: {
+    'click': "searchFlights",
+  },
+
+  searchFlights: function () {
+
+    var origin = $('#origin').val();
+
+    var searchResult = [];
+    // var search = function (origin) {
+    //   console.log(origin);
+    // };
+
+
+    console.log(origin);
+  },
 
 
   render: function () {
@@ -46,3 +41,21 @@ app.SearchView = Backbone.View.extend({
     });
   }
 });
+
+
+
+// events: {
+//     'keydown' : 'search'
+//   },
+//
+//   search: function(){
+//     // console.log("key pressed");
+//     var originSearch = $("#origin").val();
+//     console.log(originSearch);
+//     console.log(this.collection.toJSON());
+//     // var filterFlights = this.collection.filter(function(flight){
+//     //   return flight.get("origin").startsWith(originSearch);
+//     // });
+//     // this.collection = new app.Flights(filterFlights);
+//     // this.render();
+//   },
