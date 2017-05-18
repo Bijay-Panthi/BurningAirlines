@@ -1,4 +1,3 @@
-<h1>Burning Airlines</h1>
 
 <!-- <div class="search">
   <form action=""></form>
@@ -8,27 +7,32 @@
   BACKBONE SHOULD BE LOADED
 </div>
 
-<div id="searchBar">
+<script type= "html/template" id="AppViewTemplate">
+  <div id="appView">
+    <h1>Burning Airlines</h1>
+    <hr>
+    <div id="search"></div>
+    <div id="details"></div>
+    <ul id="flights"></ul>
+    <div id="seatingPlan"></div>
+  </div>
+</script>
+
+<script type="html/template" id="SearchViewTemplate">
+<div id="searchView">
   <input id="origin" type="search" placeholder="Origin">
   <input id="destination" type="search" placeholder="Destination">
-  <input id="date" type="date" placeholder="Date">
+  <!-- <input id="date" type="date" placeholder="Date"> -->
   <input id="submit" type="submit" value="Search">
 </div>
+</script>
 
-  <script type= "html/template" id="AppViewTemplate">
-    <div id="appView">
-      <h1>All Flights Availables</h1>
-      <nav>
-        <a href="#">All Flights</a>
-        <a href="#">A Flight</a>
-      </nav>
-      <hr>
-      <ul id="flights"></ul>
-    </div>
-  </script>
+<script type="html/template" id="FlightListViewTemplate">
+    <ul id="flights"></ul>
+</script>
 
-  <script type="html/template" id="FlightViewTemplate">
-    <div id="flightView">
+<script type="html/template" id="FlightDetailsTemplate">
+  <div id="flightView">
     <h1>
       <%%= flight_number %>
     </h1>
@@ -44,16 +48,30 @@
     <p>
       <%%= plane %>
     </p>
-    </div>
-  </script>
+  </div>
+</script>
+
+<script type="html/template" id="SeatingPlanViewTemplate">
+  <table id="planeMap">
+    <tr class="rows"> //ABCD...
+      <td id="column"></td> //1234...
+    </tr>
+  </table>
+</script>
+
+  <!-- // here the plane map should be shown
+    // refer to the plane map... app/views/airplanes/show.html.erb
+    // how?
+      // -->
+
 
 <!-- Templates...
 
 Start with the AppView
-  When you create a new instance and render it
-  Get the #AppViewTemplate
-  Put it in the div#app
+When you create a new instance and render it
+Get the #AppViewTemplate
+Put it in the div#app
 
 Try and get that to happen using the Backbone Router
 
- -->
+-->

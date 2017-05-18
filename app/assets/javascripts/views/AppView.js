@@ -3,9 +3,9 @@ var app = app || {};
 app.AppView = Backbone.View.extend({
   el:'#app',
 
-  initialize: function (flight) {
-    this.collection = new app.Flights(flight);
-    this.render();
+  initialize: function () {
+    // this.collection = new app.Flights(flight);
+    // this.render();
   },
 
   render: function () {
@@ -13,19 +13,33 @@ app.AppView = Backbone.View.extend({
     var templateMarkup = $("#AppViewTemplate").html();
     this.$el.html( templateMarkup );
 
-    this.collection.each(function (flight) {
-
-      var flv = new app.FlightListView({
-        model: flight
-      });
-      flv.render();
-
+    var sv = new app.SearchView({
+      collection: this.collection
     });
+    sv.render();
+
+    // var
+    // var searchViewTemplate = $("#SearchViewTemplate").html();
+    // $("#search").html( searchViewTemplate );
+
+    console.log('app view render function');
+    // this.collection.each(function (flight) {
+    //   var flv = new app.FlightView({
+    //     model: flight
+    //   });
+    //   flv.render();
+
+    // });
   }
 });
 
-
-
+//
+// Start with the AppView
+//   When you create a new instance and render it
+//   Get the #AppViewTemplate
+//   Put it in the div#app
+//
+// Try and get that to happen using the Backbone Router
 
 
 
