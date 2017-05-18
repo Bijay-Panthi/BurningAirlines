@@ -1,3 +1,4 @@
+var flights;
 var app = app || {};
 
 app.SearchView = Backbone.View.extend({
@@ -6,15 +7,13 @@ app.SearchView = Backbone.View.extend({
   render: function () {
     var search = this.model;
     var templateMarkup = $("#SearchViewTemplate").html();
-    // var actualTemplate = _.template(templateMarkup);
-    // var compiledMarkup = actualTemplate(post.toJSON());
-
+    flights = this;
     this.$el.append(templateMarkup);
 
-    this.collection.each(function (flight) {
-      // debugger;
+    flights.collection.each(function (flight) {
+      // debugger
       console.log('search view this');
-      var fv = new app.FlightView({
+      var fv = new app.FlightListView({
         model: flight
       });
       fv.render();

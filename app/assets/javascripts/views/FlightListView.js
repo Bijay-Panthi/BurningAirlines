@@ -3,23 +3,14 @@ var app = app || {};
 app.FlightListView = Backbone.View.extend({
     tagName: "li",
 
-    // events: {
-    //   'click' : 'showFlight'
-    // },
-    //
-    // showFlight: function () {
-    //   var id = this.model.get("id");
-    //   app.router.navigate("/flights" + id, true);
-    // },
-
     render: function () {
-      var flightNum = this.model.get("flight_num");
+        var msg = "Origin: " + this.model.get("origin");
+        msg += ". Destination: " + this.model.get("destination");
+        // debugger;
+        console.log( this.model.toJSON() );
+      var flightList = this.model.get("flight_number");
+      this.$el.html( msg );
+      this.$el.appendTo("#flights");
 
-      this.$el.html( flightNum );
-
-    
     }
 });
-
-// make an elem with $
-    // html + flight_num

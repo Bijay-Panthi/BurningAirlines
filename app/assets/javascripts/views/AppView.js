@@ -18,18 +18,14 @@ app.AppView = Backbone.View.extend({
     });
     sv.render();
 
-    // var
-    // var searchViewTemplate = $("#SearchViewTemplate").html();
-    // $("#search").html( searchViewTemplate );
-
     console.log('app view render function');
-    // this.collection.each(function (flight) {
-    //   var flv = new app.FlightView({
-    //     model: flight
-    //   });
-    //   flv.render();
+    this.collection.each(function (flight) {
+      var flv = new app.FlightListView({
+        model: flight
+      });
+      flv.render();
 
-    // });
+    });
   }
 });
 

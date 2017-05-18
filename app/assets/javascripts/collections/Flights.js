@@ -19,7 +19,6 @@ var flightsCollection = new app.Flights();
 
 flightsCollection.fetch().done(function () {
   flightsCollection.each(function (flight) {
-      console.log(flight);
   });
 });
 
