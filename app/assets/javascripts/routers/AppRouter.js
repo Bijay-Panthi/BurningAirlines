@@ -28,7 +28,7 @@ app.AppRouter = Backbone.Router.extend({
     appView.render();
 
     var flight = app.flights.get(id);
-
+    $("#flights").html('');
     var flightsView = new app.FlightView({
       model: flight
     });

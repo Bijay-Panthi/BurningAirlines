@@ -13,9 +13,10 @@ app.FlightListView = Backbone.View.extend({
   },
 
   render: function() {
+    console.log("RENDER");
     var msg = "Origin: " + this.model.get("origin");
     msg += ". Destination: " + this.model.get("destination");
-    var flightList = this.model.get("flight_number");
+    var flightList = this.model.get("fligh_number");
     this.$el.html(msg);
     this.$el.appendTo("#flights");
   }

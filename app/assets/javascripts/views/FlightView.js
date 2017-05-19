@@ -10,6 +10,6 @@ app.FlightView = Backbone.View.extend({
      $("#FlightDetailsTemplate").html();
     var actualTemplate = _.template(templateMarkup);
     var compiledMarkup = actualTemplate(flight.toJSON());
-    this.$el.append(templateMarkup);
+    this.$el.append(compiledMarkup);
   }
 });

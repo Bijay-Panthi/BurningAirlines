@@ -13,19 +13,39 @@ app.Flight = Backbone.Model.extend({
   },
 
   initialize: function () {
-    console.log('a new flight has been created');
+
   }
 });
 
-// var f1 = new app.Flight();
-// console.log(f1.toJSON());
-// var f2 = new app.Flight();
-// console.log(f2.toJSON());
-// var f3 = new app.Flight({
+// var f1 = new app.Flight({
 //   flight_number: 2345,
-//   origin: 'Cairns',
+//   origin: 'Sydney',
 //   destination: 'Brisbane',
 //   date: 568798,
 //   plane: 2
 // });
+// var f2 = new app.Flight({
+//   flight_number: 2345,
+//   origin: 'Cairns',
+//   destination: 'Melbourne',
+//   date: 568798,
+//   plane: 2
+// });
+// var f3 = new app.Flight({
+//   flight_number: 2345,
+//   origin: 'Sydney',
+//   destination: 'Melbourne',
+//   date: 568798,
+//   plane: 2
+// });
+// var f4 = new app.Flight({
+//   flight_number: 2345,
+//   origin: 'Melbourne',
+//   destination: 'Perth',
+//   date: 568798,
+//   plane: 2
+// });
+// console.log(f1.toJSON());
+// console.log(f2.toJSON());
 // console.log(f3.toJSON());
+// console.log(f4.toJSON());

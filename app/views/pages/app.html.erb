@@ -1,13 +1,4 @@
 
-<div>
-<h1>Burning Airlines</h1>
-
-
-<!-- <div class="search">
-  <form action=""></form>
-
-</div> -->
-
 <div id="app">
   BACKBONE SHOULD BE LOADED
 </div>
@@ -18,7 +9,7 @@
     <hr>
     <div id="search"></div>
     <div id="details"></div>
-    <ul id="flights"></ul>
+    <ul class="collection" id="flights"></ul>
     <div id="seatingPlan"></div>
   </div>
 </script>
@@ -37,23 +28,24 @@
 
 <script type="html/template" id="FlightDetailsTemplate">
   <div id="flightView">
-    <h1>
-      <%%= flight_number %>
-    </h1>
-    <h2>
-      <%%= origin %>
-    </h2>
-    <h2>
-      <%%= destination %>
-    </h2>
-    <h2>
-      <%%= date %>
-    </h2>
-    <p>
-      <%%= plane %>
-    </p>
+    <h4>
+      Flight Number: <%%= flight_number %>
+    </h4>
+    <h6>
+      Origin: <%%= origin %>
+    </h6>
+    <h6>
+      Destination: <%%= destination %>
+    </h6>
+    <h6>
+      Date: <%%= date %>
+    </h6>
+    <h6>
+      Plane ID: <%%= plane %>
+    </h6>
   </div>
 </script>
+
 <script type="html/template" id="SeatingPlanViewTemplate">
 <div>
   <table id="planeMap">

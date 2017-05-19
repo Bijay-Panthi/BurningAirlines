@@ -5,30 +5,38 @@ app.SearchView = Backbone.View.extend({
   el:'#search',
 
   events: {
-    'click': "searchFlights",
+    'click #submit': "searchFlights",
+    'keyup input': "searchFlights"
   },
 
   searchFlights: function () {
 
-    var origin = $('#origin').val();
+    var origin = $('#origin').val().toLowerCase();
+    var destination = $('#destination').val().toLowerCase();
+    var list = $('li').text();
 
-    var searchResult = [];
-    // var search = function (origin) {
-    //   console.log(origin);
-    // };
+    this.collection = app.flights.filter(function (flight) {
+      return flight.get("origin").toLowerCase().startsWith( origin )
+        && flight.get("destination").toLowerCase().startsWith( destination );
+    });
+    this.render();
 
-
-    console.log(origin);
   },
 
+  initialize: function () {
+    console.log("RENDERED ");
+  },
 
   render: function () {
     var search = this.model;
     var templateMarkup = $("#SearchViewTemplate").html();
     flights = this;
-    this.$el.append(templateMarkup);
+    if ( $("#searchView").length === 0 ) {
+      this.$el.html(templateMarkup);
+    }
 
-    flights.collection.each(function (flight) {
+    $("#flights").html('');
+    flights.collection.forEach(function (flight) {
       // debugger
       console.log('search view this');
       var fv = new app.FlightListView({

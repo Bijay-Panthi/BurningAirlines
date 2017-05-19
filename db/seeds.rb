@@ -1,12 +1,30 @@
-Airplane.destroy_all
-
-# 5.times do |airplane|
-#   row = 10
-#   columns = 20
-#   name = "Airplane\##{ airplane + 1 }"
+# # Flight.destroy_all
 #
-#   Airplane.create row: row, column: column, name: name
-#
-# end
-#
-# puts "Airplane Count #{Airplane.count}"
+# f1 = Flight.create(
+#   flight_number: 2345,
+#   origin: 'Sydney',
+#   destination: 'Brisbane',
+#   date: 568798,
+#   plane: 2
+# )
+# f2 = Flight.create(
+#   flight_number: 2345,
+#   origin: 'Cairns',
+#   destination: 'Melbourne',
+#   date: 568798,
+#   plane: 2
+# )
+# f3 = Flight.create(
+#   flight_number: 2345,
+#   origin: 'Sydney',
+#   destination: 'Melbourne',
+#   date: 568798,
+#   plane: 2
+# )
+# f4 = Flight.create(
+#   flight_number: 2345,
+#   origin: 'Melbourne',
+#   destination: 'Perth',
+#   date: 568798,
+#   plane: 2
+# )
